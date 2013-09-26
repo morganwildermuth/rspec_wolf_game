@@ -1,6 +1,8 @@
+<script src="index.js" style="text/javascript"></script>
 <form action='/new_game' method='post'>
   <input type="text" name="pack_name" placeholder="Pack Name">
   <input type="text" name="name" placeholder="Wolf Name">
   <input type="gender" name="gender" placeholder="Wolf Gender">
-  <input type="submit" value="New Game">
+  <input id="newGameForm" type="submit" value="New Game">
 </form>
+<script>document.onreadystatechange = function () {bindListeners()}</script>

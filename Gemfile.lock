@@ -78,6 +78,7 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   faker
   pg
+  rack-test
   rspec
   shotgun
   sinatra
