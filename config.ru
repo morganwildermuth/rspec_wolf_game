@@ -1,2 +1,2 @@
-require_relative "controller"
+require "./controller"
 run Sinatra::Application

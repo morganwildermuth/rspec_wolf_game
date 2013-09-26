@@ -7,6 +7,7 @@ class CreateWolves < ActiveRecord::Migration
       t.string :gender
       t.integer :age
       t.integer :health
+      t.belongs_to :pack
     end
   end
 end

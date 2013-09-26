@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2) do
     t.string  "gender"
     t.integer "age"
     t.integer "health"
+    t.integer "pack_id"
   end
 
 end
