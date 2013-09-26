@@ -1,4 +1,4 @@
-require_relative '~/Desktop/wolf_sim/db/config'
+require_relative'../../db/config'
 
 class Pack < ActiveRecord::Base
   has_many :wolves
