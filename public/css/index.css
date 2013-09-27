@@ -1,0 +1,32 @@
+#title {
+  background-image:url(../images/savepack.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  height: 120px;
+}
+
+#gameForm {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -200px;
+  border-width: 10px;
+}
+
+#newGameForm {
+  position: fixed
+  top: 80%;
+  left: 50%;
+  margin-left: 150px;
+  border-width: 5px;
+}
+
+#footer {
+  position:fixed;
+  bottom:0;
+  left:50%;
+  margin-left:-73px;
+}
+

@@ -2,6 +2,9 @@ ENV['RACK_ENV'] = 'test'
 require '../controller'
 require 'test/unit'
 require 'rack/test'
+require_relative '../app/models/pack'
+require_relative "../app/models/wolf"
+
 
 class IndexTest < Test::Unit::TestCase
   include Rack::Test::Methods
@@ -22,5 +25,31 @@ class IndexTest < Test::Unit::TestCase
   end
 
   def test_it_sets_new_wolf_pack_to_new_pack
+  end
+end
+
+describe "new user core capabilities" do
+  before(:each) do
+    wolf = Wolf.create(name: "Test_Wolf")
+    pack = Pack.create(name: "Test_Pack")
+  end
+
+  it "creates new wolf" do
+   wolf.name === "Test_Wolf"
+  end
+
+  it "creates new pack" do
+    pack.name === "Test_Pack"
+  end
+
+  it "places wolf in new pack" do
+    wolf.pack = pack
+    wolf.save
+    wolf.pack_id == pack.id
+  end
+
+  after(:each) do
+    Wolf.delete(wolf.id)
+    Pack.delete(pack.id)
   end
 end
