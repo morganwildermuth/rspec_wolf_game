@@ -36,3 +36,18 @@ describe "new user core capabilities" do
     Pack.delete_all
   end
 end
+
+describe "start page" do
+  include Rack::Test::Methods
+
+  def app
+    Sinatra::Applcication
+  end
+
+  it 'displays relevant pack info' do
+    Wolf.create(name: 'Test_Wolf', gender: male, health: 100)
+    get '/start'
+    assert last_response.ok?
+    asset_equal 'Test_Wolf, male, 100'
+  end
+end
