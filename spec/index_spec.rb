@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift(File.expand_path('./app'))
 ENV['RACK_ENV'] = 'test'
 require 'rack/test'
+# test to see whether you can run it as test without command lines due to line 2 
 require_relative '../db/config'
 require_relative '../controller'
 
