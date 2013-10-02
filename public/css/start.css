@@ -1,0 +1,17 @@
+#wolfList {
+  position: relative;
+  left: 46%;
+}
+
+#choiceList {
+  position: relative;
+  left: 40%;
+}
+
+#explanation {
+  text-align: center;
+}
+
+#locationTitle {
+  text-align: center;
+}

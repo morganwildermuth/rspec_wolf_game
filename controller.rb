@@ -11,5 +11,11 @@ post '/new_game' do
   starting_pack = Pack.create(name: params[:pack_name])
   starting_wolf.pack = starting_pack
   starting_wolf.save
-  redirect to('/')
+  redirect to('/start')
+end
+
+get '/start' do
+  pack_id_number = Pack.last.id
+  @wolves = Wolf.where(pack_id: pack_id_number)
+  erb :start
 end

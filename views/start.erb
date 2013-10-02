@@ -1,1 +1,20 @@
-use prompts
+<script src="start.js" style="text/javascript"></script>
+<link href="../css/start.css" rel="stylesheet">
+<div id="wolfList">
+  <% @wolves.map do |wolf| %>
+  <p>Name: <%=wolf.name %></p>
+  <p>Gender: <%=wolf.gender%> </p>
+  <p>Health: <%=wolf.health%> </p>
+  <% end %>
+</div>
+<div id="explanation">
+  <p>Choose how you'll handle the upcoming season...stay in the Old Forest where food is scarce but it's safe or take a risk in the more dangerous New Forest in the hopes of securing some more substantial show...</p>
+</div>
+  <p id="locationTitle">Location</p>
+  <div id='choiceList'>
+  <form>
+    <input type="radio" name="location" value="Old Forest">Old Forest
+    <input type="radio" name="location" value="New Forest">New Forest
+    <input id='choiceSubmit' type="submit" value="Submit">
+  </form>
+</div>
