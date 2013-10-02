@@ -19,3 +19,21 @@ get '/start' do
   @wolves = Wolf.where(pack_id: pack_id_number)
   erb :start
 end
+
+post '/choose_location' do
+  pack_id_number = Pack.last.id
+  @wolves = Wolf.where(pack_id: pack_id_number)
+  choice = params[:location]
+  if choice == 'Old Forest'
+    @wolves.map do |wolf| 
+      wolf.health -= 5
+      wolf.save
+    end
+  else
+    @wolves.map do |wolf|
+      wolf.health -= 10
+      wolf.save
+    end
+  end
+  redirect to('/start')
+end
