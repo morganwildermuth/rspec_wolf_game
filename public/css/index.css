@@ -17,7 +17,7 @@
 
 #newGameForm {
   position: fixed
-  top: 80%;
+  top: 70%;
   left: 50%;
   margin-left: 150px;
   border-width: 5px;
@@ -28,5 +28,11 @@
   bottom:0;
   left:50%;
   margin-left:-73px;
+}
+
+#fbImage {
+  position: fixed;
+  bottom: 10%;
+  left: 46%;
 }
 
